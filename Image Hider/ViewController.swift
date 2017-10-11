@@ -10,16 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var thirdImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func showAllButtonPushed(_ sender: Any) {
+        firstImage.isHidden = false
+        secondImage.isHidden = false
+        thirdImage.isHidden = false
     }
-
-
+    
+    @IBAction func hideFirstPushed(_ sender: Any) {
+        firstImage.isHidden = true
+    }
+    
+    @IBAction func hideSecondPushed(_ sender: Any) {
+        secondImage.isHidden = true
+    }
+    
+    @IBAction func hideThirdPushed(_ sender: Any) {
+        thirdImage.isHidden = true
+    }
 }
 
